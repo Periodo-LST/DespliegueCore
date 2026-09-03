@@ -1,0 +1,20 @@
+global:
+  domain: argo.fluffy.lst
+
+configs:
+  params:
+    server.insecure: true
+
+server:
+  ingress:
+    enabled: true
+    ingressClassName: traefik
+    annotations:
+      cert-manager.io/cluster-issuer: step-ca-issuer
+      traefik.ingress.kubernetes.io/router.entrypoints: web,websecure
+      traefik.ingress.kubernetes.io/router.tls: "true"
+      traefik.ingress.kubernetes.io/service.serversscheme: http
+    path: /
+    pathType: Prefix
+    hostname: argo.fluffy.lst
+    tls: true

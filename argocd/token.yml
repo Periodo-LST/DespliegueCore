@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: gitlab-repo-secret
+  namespace: argocd
+  labels:
+    argocd.argoproj.io/secret-type: repository
+stringData:
+  name: lst-gitlab
+  type: git
+  url: https://gitlab.lst.tfo.upm.es/IT/rke-ha-ansible.git
+  password: glpat-pfSS-j1st-UcekXwnIB-3m86MQp1OjdvCA.01.0y0xl49b4
+  username: gitlab-user
