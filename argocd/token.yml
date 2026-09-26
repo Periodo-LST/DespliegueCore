@@ -6,8 +6,8 @@ metadata:
   labels:
     argocd.argoproj.io/secret-type: repository
 stringData:
-  name: lst-gitlab
+  name: 'xxx'
   type: git
-  url: https://gitlab.lst.tfo.upm.es/IT/rke-ha-ansible.git
-  password: glpat-pfSS-j1st-UcekXwnIB-3m86MQp1OjdvCA.01.0y0xl49b4
-  username: gitlab-user
+  url: 'xxx'
+  password: 'xxx'
+  username: 'xxx'
