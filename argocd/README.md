@@ -64,10 +64,10 @@ $gitlabTokenSecure = Read-Host 'GitLab token' -AsSecureString
 $gitlabToken = [System.Net.NetworkCredential]::new('', $gitlabTokenSecure).Password
 
 kubectl -n argocd create secret generic gitlab-repo-secret `
-  --from-literal=name=lst-gitlab `
+  --from-literal=name='xxx' `
   --from-literal=type=git `
-  --from-literal=url=https://gitlab.lst.tfo.upm.es/IT/rke-ha-ansible.git `
-  --from-literal=username=gitlab-user `
+  --from-literal=url='xxx' `
+  --from-literal=username='xxx' `
   --from-literal=password=$gitlabToken `
   --dry-run=client -o yaml | kubectl apply -f -
 
